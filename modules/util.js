@@ -9,7 +9,7 @@ module.exports = bot => {
 	};
 
 	bot.updateStatus = async () => {
-		bot.editStatus({ name: `${bot.defaultCfg.prefix}help | ${(+(await bot.db.members.count())).toLocaleString()} registered`});
+		bot.editStatus("dnd",{ name: `${bot.defaultCfg.prefix}help | ${(+(await bot.db.members.count())).toLocaleString()} registered`});
 	};
 
 	bot.ageOf = user => {
